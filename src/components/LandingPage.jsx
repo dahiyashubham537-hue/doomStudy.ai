@@ -35,8 +35,7 @@ export default function LandingPage() {
 
   const client = new OpenAI({
     baseURL: "https://router.huggingface.co/v1",
-    apiKey: "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",
-    dangerouslyAllowBrowser: true,
+    apiKey: import.meta.env.VITE_HF_API_KEY,
   });
 
   const gptQuery = `
@@ -115,8 +114,7 @@ Output format:
 
   const client = new OpenAI({
     baseURL: "https://router.huggingface.co/v1",
-    apiKey: "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",
-    dangerouslyAllowBrowser: true,
+    apiKey: import.meta.env.VITE_HF_API_KEY,
   });
 
   const gptResults = await client.chat.completions.create({
